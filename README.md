@@ -20,6 +20,12 @@ Of course, this example is not all encompassing, but it does allow a great visua
 
 Thank you for your time. 
 
+---
+## The relevant files
+1. https://github.com/Dubletar/AdamVMcDermott/blob/main/src/components/ControlledForm/ControlledForm.jsx
+2. https://github.com/Dubletar/AdamVMcDermott/blob/main/src/components/FormField/FormField.jsx
+---
+
 ### Included
 * Fully dynamic, componentized, and controlled input field generation from data keys.
 * Dynamic input field rules based on data provided.
