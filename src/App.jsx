@@ -43,7 +43,7 @@ const formSchema = [
   },
   { 
     name: 'age',
-    label: 'Age',
+    label: 'Age (ex: 25)',
     type: 'number',
     placeholder: 'ex: Up',
     rules: {
