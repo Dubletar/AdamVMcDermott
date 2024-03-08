@@ -1,0 +1,15 @@
+.container {
+    position: relative;
+}
+
+.hasError {
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+.input {
+    position: relative;
+    width: 90%;
+    height: 20px;
+    font-size: 16px;
+}
