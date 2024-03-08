@@ -1,71 +1,92 @@
-# Getting Started with Create React App
+# Adam Velma - McDermott
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+To run the application: 
+```
+$ git clone git@github.com:Dubletar/AdamVMcDermott.git
+$ cd AdamVMcDermott
+$ npm i
+$ npm start
+```
+---
 
-## Available Scripts
+## Dynamic Form Demo
 
-In the project directory, you can run:
+I am providing this example, written this morning, because we ran out of time during the interview for how I wanted to answer the question of dynamic fields from data (an array of objects).
 
-### `npm start`
+My approach was to dynamically build the fields by mapping the key data and values, for a specific reason. However, due to limited time, I had to provide the simple answer of mapping the data directly and rendering inputs. In my opinion, that is not the way to render dynamic forms. This example provides the full example of how I would and have rendered dynamic forms. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Of course, this example is not all encompassing, but it does allow a great visualization into my thought process. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Thank you for your time. 
 
-### `npm test`
+### Included
+* Fully dynamic, componentized, and controlled input field generation from data keys.
+* Dynamic input field rules based on data provided.
+* Error state and handling, based on the rules. (Right now the only rule that creates an error is empty fields, required is true).
+* Form handling errors and values sent from input fields.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Example Data
+```
+const formSchema = [
+  { 
+    name: 'firstName',
+    label: 'First Name',
+    type: 'text',
+    placeholder: 'ex: Never',
+    rules: {
+      required: true,
+      maxlength: 20
+    }
+  },
+  { 
+    name: 'middleName',
+    label: 'Middle Name',
+    type: 'text',
+    placeholder: 'ex: Gonna',
+    rules: {
+      required: true,
+      maxlength: 20
+    }
+  },
+  { 
+    name: 'nickName',
+    label: 'Nick Name',
+    type: 'text',
+    placeholder: 'ex: Give',
+    rules: {
+      required: true,
+      maxlength: 20
+    }
+  },
+  { 
+    name: 'lastName',
+    label: 'Last Name',
+    type: 'text',
+    placeholder: 'ex: You',
+    rules: {
+      required: true,
+      maxlength: 20
+    }
+  },
+  { 
+    name: 'age',
+    label: 'Age (ex: 25)',
+    type: 'number',
+    placeholder: 'ex: Up',
+    rules: {
+      required: true,
+      maxlength: 3
+    }
+  }
+];
+```
 
-### `npm run build`
+### Screenshot of loaded form
+![image](https://github.com/Dubletar/AdamVMcDermott/assets/13546530/a28ad8e3-a6dc-4e1b-9539-107071779473)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Screenshot of error handling
+![image](https://github.com/Dubletar/AdamVMcDermott/assets/13546530/6677c7e2-d162-4811-b3f6-aba3aa6149d1)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# AdamVMcDermott
+### Screenshot of console error
+![image](https://github.com/Dubletar/AdamVMcDermott/assets/13546530/6920cf44-657a-4600-bcd3-8f0450836d6b)
